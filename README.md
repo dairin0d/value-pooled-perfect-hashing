@@ -7,6 +7,8 @@ This is a small experiment exploring the idea of "value-pooled" [perfect hashing
 * At least on these small examples, it seems to be generally sufficient to do 500-1000 iterations of solution search for a given combination of `G` and `V` sizes to find whether a "good enough" solution exists, and past that point diminishing returns are typically hit very quickly (e.g. 10000 iterations don't provide a very big improvement in compression ratio).
 * The relative benefit or disadvantage compared to other storage schemes would likely depend on how sparse or dense the stored keys are, compared to the full space of possible keys. E.g. for anything with spatial coherence (pixels, voxels) a tree-like structure is likely to use less memory, but for very sparse keys with little coherence (strings, binary blobs) this sort of hash map might be more compact.
 
+(If you want to try running it yourself, the code is in the [pooled_hashing.ipynb](pooled_hashing.ipynb) Jupyter notebook)
+
 ## Example:
 
 Results of optimal solution search for 64 keys and 2 values (10 runs averaged together):
